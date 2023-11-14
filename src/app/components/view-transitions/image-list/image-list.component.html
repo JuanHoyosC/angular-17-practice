@@ -1,0 +1,14 @@
+<section class="grid grid-cols-4 gap-3">
+    @for(image of imageService.images; track image.id) {
+    <div class="card border flex flex-col gap-4 cursor-pointer" (click)="goToImage(image.id)">
+        <img [src]="image.urls.small" alt="" srcset="" loading="lazy" class="object-cover w-[100%] h-64"
+            [style.viewTransitionName]="image?.id">
+        <div class="flex flex-col gap-2 px-4 pb-4">
+            <p>{{ image.alt_description }}</p>
+            <p [style.viewTransitionName]="'likes-'+image?.id">
+                💓{{ image.likes }}
+            </p>
+        </div>
+    </div>
+    }
+</section>

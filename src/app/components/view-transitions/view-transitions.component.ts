@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ImageService } from '../../services/image.service';
-import { HttpClientModule } from '@angular/common/http';
+import { Router, RouterModule, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-view-transitions',
   standalone: true,
-  imports: [CommonModule, HttpClientModule],
+  imports: [CommonModule, RouterOutlet],
   templateUrl: './view-tranticions.component.html',
   styleUrl: './view-transitions.component.css'
 })
